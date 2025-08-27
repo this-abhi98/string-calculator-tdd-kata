@@ -7,4 +7,7 @@ describe('String Calculator kata', () => {
     it('returns the number itself if only one number is provided', () => {
       expect(addString('1')).toBe(1);
     });
+    it('returns the sum of all the comma-separated numbers', () => {
+      expect(addString('1,2,3')).toBe(6);
+    });
   })
