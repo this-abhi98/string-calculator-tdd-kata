@@ -3,8 +3,8 @@ function addString(numbersString) {
   if (numbersString === '') {
     return 0;
   }
-  return parseInt(numbersString);
-
-
+  const splittedArray = numbersString.split(',');
+  var sum = splittedArray.reduce((acc, part) => acc + parseInt(part), 0);
+  return sum
 }
 export { addString }
