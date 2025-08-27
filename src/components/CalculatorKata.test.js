@@ -22,4 +22,7 @@ describe('String Calculator kata', () => {
     it('ignore numbers greater than 1000', () => {
       expect(addString('2,1001')).toBe(2);
     });
+    it('should supports custom delimiters of any length with //[***]\\n syntax', () => {
+    expect(addString('//[***]\n1***2***3')).toBe(6);
+  });
   })
