@@ -16,4 +16,7 @@ describe('String Calculator kata', () => {
     it('should return sum on custom single-character delimiter using //[delimiter]\\n syntax', () => {
       expect(addString('//;\n1;2')).toBe(3);
     });
+    it('to throws exception error when a negative number is passed', () => {
+      expect(() => addString('1,-2')).toThrow('negatives not allowed: -2');
+    });
   })
