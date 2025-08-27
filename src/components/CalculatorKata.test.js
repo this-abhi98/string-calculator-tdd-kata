@@ -13,4 +13,7 @@ describe('String Calculator kata', () => {
     it('returns the sum when newlines are used as delimiters as well', () => {
       expect(addString('1,2,3\n5,4')).toBe(15);
     });
+    it('should return sum on custom single-character delimiter using //[delimiter]\\n syntax', () => {
+      expect(addString('//;\n1;2')).toBe(3);
+    });
   })
