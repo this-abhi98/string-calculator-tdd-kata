@@ -19,4 +19,7 @@ describe('String Calculator kata', () => {
     it('to throws exception error when a negative number is passed', () => {
       expect(() => addString('1,-2')).toThrow('negatives not allowed: -2');
     });
+    it('ignores numbers greater than 1000', () => {
+      expect(addString('2,1001')).toBe(2);
+    });
   })
