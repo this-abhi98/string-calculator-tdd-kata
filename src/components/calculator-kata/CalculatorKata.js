@@ -26,7 +26,9 @@ function addString(numbersString) {
       throw new Error(`negatives not allowed: ${negatives.join(',')}`);
     }
 
-  var sum = splittedArray.reduce((acc, part) => acc + parseInt(part), 0);
+    const filteredNumbers = splittedArray.filter((n) => n <= 1000);
+
+  var sum = filteredNumbers.reduce((acc, number) => acc + parseInt(number), 0);
   return sum
 }
 export { addString }
